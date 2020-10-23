@@ -2,7 +2,6 @@ package com.grace.chucknorris;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void update() {
 
-        Call<ValueModel> authModelCall = genToken().getToken();
+        Call<ValueModel> authModelCall = genToken().getRandomToken();
 
         authModelCall.enqueue(new Callback<ValueModel>() {
             @Override
